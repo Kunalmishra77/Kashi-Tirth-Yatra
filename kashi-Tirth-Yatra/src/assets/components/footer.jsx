@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaYoutube, FaArrowUp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import footerData from "./FooterData";
+import footerData from "./footerData";
 import { FaComments } from "react-icons/fa";
 
 const Footer = ({ logo, companyName }) => {
