@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.back-img {
+  height: 60vh;
+  object-fit: cover;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  transition: background-image 1s ease-in-out;
+}
+
+.img-fluid.logo-img {
+  height: 6rem;
+}
+
+.logo.navbar-brand {
+  margin: 0 0.5rem;
+  padding: 1rem 0;
+}
+
+.cont.container-fluid {
+  padding: 0 2rem;
+}
+
+.desc.lead {
+  font-size: 20px;
+}
+
+.button.overlay-btn {
+  background: #f08b1b;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 1.3em;
+  padding: 0.8rem 1.3rem;
+  white-space: nowrap;
+}
+
+.button.overlay-btn:hover {
+  background: #fff;
+  color: #f29735;
+}
+
+@media (max-width: 1250px) {
+  .back-img {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .img-fluid.logo-img {
+    height: 5rem;
+  }
+
+  .logo.navbar-brand {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cont.container-fluid {
+    padding: 0 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .desc.lead {
+    font-size: 18px;
+  }
+
+  .head-cont.fw-semibold {
+    font-size: 34px;
+  }
+
+  .button.overlay-btn {
+    font-size: 1.3em;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .back-img {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-fluid.logo-img {
+    height: 4rem;
+  }
+
+  .cont.container-fluid {
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .desc.lead {
+    font-size: 15px;
+  }
+
+  .head-cont.fw-semibold {
+    font-size: 22px;
+  }
+
+  .button.overlay-btn {
+    font-size: 1.3em;
+    padding: 0.5rem 1rem;
+  }
+
+  .middle.overlay-content {
+    padding: 0 3rem;
+  }
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.overlay-content {
+  transform: translate(-50%, 100%);
+  /* Initial position */
+  animation: slideUpFadeIn 2s ease-out forwards;
+}
+
+
+
+/* 🔸 Hover effect on the whole card */
+.shadow-sm.hover-effect {
+  background: #fafafa;
+}
+
+.shadow-sm.hover-effect:hover {
+  color: #fff;
+  background: #ff8b0b;
+  transition: background 0.3s ease;
+}
+
+/* 🔸 Initial icon color (orange-like) using CSS filter */
+.shadow-sm.hover-effect .icon {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(92%) saturate(2740%) hue-rotate(0deg) brightness(101%) contrast(107%);
+  transition: filter 0.3s ease;
+  width: 100px;
+}
+
+/* ✅ Fix: On card hover, make icon white */
+.shadow-sm.hover-effect:hover .icon {
+  filter: brightness(0) invert(1);
+}
+
+
+.hero-wrapper {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.85;
+  border-radius: 25px;
+}
+
+/* Glass effect for form */
+.hero-form {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(1px);
+}
+
+.transparent-input {
+  background-color: transparent !important;
+  border: 1px solid #eee !important;
+  color: #fff !important;
+}
+
+.transparent-input::placeholder {
+  color: rgba(138, 133, 133, 0.966) !important;
+  opacity: 0.8;
+}
+
+.text-vns{
+  color: #f08b1b;
+}
+
+.transparent-input:focus {
+  border-color: #f08b1b !important;
+  box-shadow: 0 0 5px #f29735;
+}
+
+/* Orange button styling */
+.btn.hero-button {
+  background-color: #ff8b0b;
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn.hero-button:hover {
+  background-color: #f29735;
+}
+
+/* Responsive fix: ensure content stacks nicely */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    padding: 1rem;
+  }
+
+  .hero-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-form.shadow {
+    margin-top: 1rem;
+  }
+
+  .cont-sec.row {
+    padding: 0 2rem;
+  }
+}
